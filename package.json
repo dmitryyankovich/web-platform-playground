@@ -1,0 +1,14 @@
+{
+  "name": "web-platform-playground",
+  "version": "0.0.0",
+  "main": "app.js",
+  "author": {
+    "name": "Alexei Skachykhin",
+    "email": "alexei.skachykhin@live.com"
+  },
+  "dependencies": {
+    "connect": "~2.12.0",
+    "ws": "~0.4.31",
+    "socket.io": "~0.9.16"
+  }
+}

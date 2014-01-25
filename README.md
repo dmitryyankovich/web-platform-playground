@@ -1,9 +1,11 @@
-﻿Set of code samples, useful for learning and teaching various aspects of Web Platform.
-
-Getting Started
+﻿Getting Started
 ================
-1. Download and install [node.js]
-2. npm install
+Download and install [node.js]
+
+Install required npm packages
+
+```npm install```
+
 
 Roadmap
 =======

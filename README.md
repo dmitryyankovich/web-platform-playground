@@ -3,7 +3,6 @@
 Download and install [node.js]
 
 Install required npm packages
-
 ```npm install```
 
 

@@ -1,24 +1,24 @@
-﻿var server = require('../../../../shared/server');
+﻿var app = require('../../../../shared/server').app;
 
 
-var captures = [];
+app.set('data', { captures: [] });
 
-server.start(function (app, connect) {
-    app.use('/polling/captures', function(request, response) {
-        if (request.method === 'POST') {
-            captures.push(request.body);
-            response.end();
-        }
 
-        if (request.method === 'GET') {
-            var since = Number(request.query.since);
+app.get('/polling/captures', function(request, response){
+    var captures = app.get('data').captures;
+    var since = Number(request.query.since);
 
-            var updatedCaptures = captures.filter(function (capture) {
-                return (capture.timestamp > since);
-            });
-
-            response.setHeader('Content-Type', 'application/json');
-            response.end(JSON.stringify(updatedCaptures));
-        }
+    var updatedCaptures = captures.filter(function (capture) {
+        return (capture.timestamp > since);
     });
+
+    response.json(updatedCaptures);
+});
+
+
+app.post('/polling/captures', function(request, response) {
+    var captures = app.get('data').captures;
+    captures.push(request.body);
+
+    response.end();
 });

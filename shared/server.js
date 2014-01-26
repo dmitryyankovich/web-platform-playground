@@ -1,21 +1,14 @@
-﻿var connect = require('connect')
-var http = require('http');
+﻿var express = require('express');
+var path = require('path');
 
-var app = connect()
-    .use(connect.static(__dirname + '/../samples'))
-    .use(connect.directory(__dirname + '/../samples'))
-    .use(connect.query())
-    .use(connect.json());
+var app = express()
+    .use(express.static(path.join(__dirname, '..', 'samples')))
+    .use(express.directory(path.join(__dirname, '..', 'samples')))
+    .use(express.json());
 
+var httpServer = app.listen(8080);
 
-exports.start = function (beforeStart, afterStart) {
-    if (typeof beforeStart === 'function') {
-        beforeStart(app, connect);
-    }
-
-    var server = http.createServer(app).listen(8080);
-
-    if (typeof afterStart === 'function') {
-        afterStart(server);
-    }
+module.exports = {
+    app: app,
+    httpServer: httpServer
 };

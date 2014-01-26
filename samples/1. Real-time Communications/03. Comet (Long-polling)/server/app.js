@@ -1,29 +1,37 @@
-﻿var server = require('../../../../shared/server');
+﻿var app = require('../../../../shared/server').app;
 var EventEmitter = require('events').EventEmitter;
 
-var captures = [];
-var captureEvent = new EventEmitter();
 
-server.start(function (app, connect) {
-    app.use('/long-polling/captures', function(request, response) {
-        if (request.method === 'POST') {
-            captures.push(request.body);
-            response.end();
+app.set('data', { 
+    captures: [],
+    captureEvent: new EventEmitter()
+});
 
-            captureEvent.emit('capture');
-        }
 
-        if (request.method === 'GET') {
-            captureEvent.once('capture', function () {
-                var since = Number(request.query.since);
+app.get('/long-polling/captures', function(request, response){
+    var captures = app.get('data').captures;
+    var captureEvent = app.get('data').captureEvent;
 
-                var updatedCaptures = captures.filter(function (capture) {
-                    return (capture.timestamp > since);
-                });
+    var onCapture = function () {
+        var since = Number(request.query.since);
 
-                response.setHeader('Content-Type', 'application/json');
-                response.end(JSON.stringify(updatedCaptures));
-            });
-        }
-    });
+        var updatedCaptures = captures.filter(function (capture) {
+            return (capture.timestamp > since);
+        });
+
+        response.json(updatedCaptures);
+    };
+
+    captureEvent.once('capture', onCapture);
+});
+
+
+app.post('/long-polling/captures', function(request, response) {
+    var captures = app.get('data').captures;
+    var captureEvent = app.get('data').captureEvent;
+
+    captures.push(request.body);
+    captureEvent.emit('capture');
+
+    response.end();
 });

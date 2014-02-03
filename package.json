@@ -9,6 +9,7 @@
   "dependencies": {
     "ws": "~0.4.31",
     "socket.io": "~0.9.16",
-    "express": "~3.4.8"
+    "express": "~3.4.8",
+    "open": "0.0.4"
   }
 }

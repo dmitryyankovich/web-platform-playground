@@ -10,7 +10,6 @@ Roadmap
 =======
 Add code somples on following topics:
 
-* IndexedDB
 * Audio
 * Video
 * Canvas

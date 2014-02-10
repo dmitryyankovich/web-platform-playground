@@ -5,12 +5,10 @@
         entryPoint: function () {
             App.Database.init(function() {
                 App.GitHub.getRepositories('alexeiskachykhin', function(repositories) {
-                    repositories.forEach(function(repository) {
-                        App.Database.insert(repository);
-                    });
-
-                    App.Database.select(function(repositories) {
-                        console.log(repositories);
+                    App.Database.insert(repositories, function () {
+                        App.Database.select(function(repositories) {
+                            console.log(repositories);
+                        });
                     });
                 });
             });

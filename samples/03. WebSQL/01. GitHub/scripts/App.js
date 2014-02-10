@@ -9,8 +9,8 @@
                         App.Database.insert(repository);
                     });
 
-                    App.Database.select(function(repository) {
-                        console.log(repository);
+                    App.Database.select(function(repositories) {
+                        console.log(repositories);
                     });
                 });
             });

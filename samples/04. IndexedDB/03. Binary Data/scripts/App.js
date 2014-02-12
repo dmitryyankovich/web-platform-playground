@@ -12,8 +12,8 @@
 
                 App.OpenStreetMap.getTile(tileOptions, function(tile) {
                     App.Database.insert(tile, function() {
-                        App.Database.select(function(tile) {
-                            alert('It works');
+                        App.Database.select(function(tiles) {
+                            App.OpenStreetMap.renderTiles(tiles);
                         });
                     });
                 });

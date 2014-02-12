@@ -21,6 +21,23 @@
             });
 
             request.send();
+        },
+
+        renderTile: function(tile) {
+            var image = new Image();
+                            
+            image.addEventListener('load', function () {
+                URL.revokeObjectURL(this.src);
+            });
+                            
+            image.src = URL.createObjectURL(tile);
+            document.body.appendChild(image);
+        },
+
+        renderTiles: function(tiles) {
+            tiles.forEach(function(tile) {
+                this.renderTile(tile);
+            }.bind(this));
         }
     };
 

@@ -3,35 +3,32 @@
 
     App.Database = {
         init: function (callback) {
-            var self = this;
-            
-
             var connection = indexedDB.open('GitHubDB', 1);
 
             connection.addEventListener('upgradeneeded', function (e) {
                 var db = e.target.result;
 
-                if (db.objectStoreNames.contains('Repositories')) {
-                    db.deleteObjectStore('Repositories');
+                if (db.objectStoreNames.contains('repositories')) {
+                    db.deleteObjectStore('repositories');
                 }
 
-                db.createObjectStore('Repositories', {
+                db.createObjectStore('repositories', {
                     keyPath: 'id'
                 });
             });
 
             connection.addEventListener('success', function (e) {
-                self.database = e.target.result;
+                this.database = e.target.result;
 
                 if (typeof callback === 'function') {
                     callback();
                 }
-            });
+            }.bind(this));
         },
 
         insert: function(objects, callback) {
-            var transaction = this.database.transaction(['Repositories'], 'readwrite');
-            var store = transaction.objectStore('Repositories');
+            var transaction = this.database.transaction(['repositories'], 'readwrite');
+            var store = transaction.objectStore('repositories');
             
             objects.forEach(function (object) {
                 store.put(object);
@@ -45,8 +42,8 @@
         },
 
         select: function (callback) {
-            var transaction = this.database.transaction(['Repositories'], 'readonly');
-            var store = transaction.objectStore('Repositories');
+            var transaction = this.database.transaction(['repositories'], 'readonly');
+            var store = transaction.objectStore('repositories');
 
             var results = [];
             var cursor = store.openCursor();

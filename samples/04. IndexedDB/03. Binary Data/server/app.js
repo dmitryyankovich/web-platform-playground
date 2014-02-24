@@ -1,10 +1,5 @@
 ﻿var app = require('../../../../shared/server').app;
-var http = require('http');
+var proxy = require('proxy-middleware');
+var url = require('url');
 
-app.get('/proxy', function(request, response){
-    var url = request.query.url;
-
-    http.get(url, function(proxyResponse) {
-        proxyResponse.pipe(response);
-    });
-});
+app.use('/lorempixel', proxy(url.parse('http://lorempixel.com')));

@@ -3,16 +3,14 @@
 
     App.Lorempixel = {
         getImage: function(imageOptions, callback) {
-            var url = ('http://lorempixel.com/{width}/{height}/{category}/')
+            var url = ('/lorempixel/{width}/{height}/{category}/?' + Date.now())
                 .replace('{width}', imageOptions.width)
                 .replace('{height}', imageOptions.height)
                 .replace('{category}', imageOptions.category);
 
-            var proxiedUrl = ('/proxy?url=' + encodeURIComponent(url));
-
 
             var request = new XMLHttpRequest();
-            request.open('GET', proxiedUrl, true);
+            request.open('GET', url, true);
             request.responseType = 'blob';
 
             request.addEventListener('load', function () {

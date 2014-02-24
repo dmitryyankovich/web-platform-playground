@@ -3,16 +3,16 @@
 
     App.Database = {
         init: function (callback) {
-            var connection = indexedDB.open('OpenStreetDB', 1);
+            var connection = indexedDB.open('ImageDB', 1);
 
             connection.addEventListener('upgradeneeded', function (e) {
                 var db = e.target.result;
 
-                if (db.objectStoreNames.contains('tiles')) {
-                    db.deleteObjectStore('tiles');
+                if (db.objectStoreNames.contains('images')) {
+                    db.deleteObjectStore('images');
                 }
 
-                db.createObjectStore('tiles', {
+                db.createObjectStore('images', {
                     autoIncrement: true
                 });
             });
@@ -27,8 +27,8 @@
         },
 
         insert: function(object, callback) {
-            var transaction = this.database.transaction(['tiles'], 'readwrite');
-            var store = transaction.objectStore('tiles');
+            var transaction = this.database.transaction(['images'], 'readwrite');
+            var store = transaction.objectStore('images');
             
             store.put(object);
 
@@ -40,8 +40,8 @@
         },
 
         select: function (callback) {
-            var transaction = this.database.transaction(['tiles'], 'readonly');
-            var store = transaction.objectStore('tiles');
+            var transaction = this.database.transaction(['images'], 'readonly');
+            var store = transaction.objectStore('images');
 
             var results = [];
             var cursor = store.openCursor();

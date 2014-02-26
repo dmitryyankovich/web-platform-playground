@@ -18,17 +18,19 @@ Following topics are covered:
 
 Getting Started
 ================
-Download and install [node.js]
+1. Download and install [node.js]
 
-Install required npm packages
-```npm install```
+2. Install required npm packages
 
-Almost all of the samples require simple Web server to operate correctly, so:
-```node shared/server.js```
+ ```npm install```
 
-Some samples have specific server behavior that can be found in server directory within code sample.
-For these ones use:
-```node <path_to_code_sample>/server/app.js```
+3. Almost all of the samples require simple Web server to operate correctly, so:
+
+ ```node shared/server.js```
+
+4. Some samples have specific server behavior that can be found in server directory within code sample.
+
+ ```node <path_to_code_sample>/server/app.js```
 
 
 Roadmap

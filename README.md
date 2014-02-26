@@ -1,4 +1,7 @@
-﻿Getting Started
+﻿Set of code samples built around accepted and experimental Web specifications, useful for learning and teaching various aspects of the Web Platform.
+
+
+Getting Started
 ================
 Download and install [node.js]
 
@@ -10,7 +13,7 @@ Roadmap
 =======
 Add code somples on following topics:
 
-* Audio
+* FileSystem API
 * Video
 * Canvas
 * UserMedia API

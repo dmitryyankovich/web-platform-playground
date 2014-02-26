@@ -28,8 +28,8 @@ Getting Started
 
  ```node shared/server.js```
 
-4. Some samples have specific server behavior that can be found in server directory within code sample.
-
+ or some samples have specific server behavior that can be found in server directory within code sample, for these kind of samples you should execute following command instead:
+ 
  ```node <path_to_code_sample>/server/app.js```
 
 

@@ -1,5 +1,7 @@
 ﻿Set of code samples built around accepted and experimental Web specifications, useful for learning and teaching various aspects of the Web Platform.
 
+Topics
+======
 Following topics are covered:
 * Examples of live interactive Web applications
 * Web Storage

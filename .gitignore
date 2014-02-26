@@ -39,11 +39,13 @@ ehthumbs.db
 Thumbs.db
 
 
-# Visual Studio temporary files #
+# Visual Studio files #
 #################################
 *.suo
 *.user
 *.njsproj
+*.sln
+README.html
 
 
 # Downloadble Packages #

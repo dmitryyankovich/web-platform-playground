@@ -1,5 +1,18 @@
 ﻿Set of code samples built around accepted and experimental Web specifications, useful for learning and teaching various aspects of the Web Platform.
 
+Following topics are covered:
+* Examples of live interactive Web applications
+* Web Storage
+ * Local Storage
+ * Session Storage
+* WebSQL
+* IndexedDB
+* Audio
+* Real-time Communications
+ * Polling / Long-polling / HTTP Streaming
+ * Server-sent Events
+ * Web Sockets
+
 
 Getting Started
 ================

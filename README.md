@@ -23,6 +23,13 @@ Download and install [node.js]
 Install required npm packages
 ```npm install```
 
+Almost all of the samples require simple Web server to operate correctly, so:
+```node shared/server.js```
+
+Some samples have specific server behavior that can be found in server directory within code sample.
+For these ones use:
+```node <path_to_code_sample>/server/app.js```
+
 
 Roadmap
 =======

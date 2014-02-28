@@ -10,6 +10,7 @@ Following topics are covered:
 * WebSQL
 * IndexedDB
 * Audio
+* Video
 * Real-time Communications
  * Polling / Long-polling / HTTP Streaming
  * Server-sent Events
@@ -38,7 +39,9 @@ Roadmap
 Add code somples on following topics:
 
 * FileSystem API
-* Video
+* Text Track API
+* Media Source Extensions
+* Encrypted Media Extensions
 * Canvas
 * UserMedia API
 * Audio DSP
@@ -47,6 +50,7 @@ Add code somples on following topics:
 * Binary Data
 * Web Workers
 * Web Sockets
+* WebRTC
 * XMLHttpRequest 2
 * Geolocation API
 * Device Orientation

@@ -1,0 +1,8 @@
+﻿<svg id='image' version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="blur">
+            <feColorMatrix values="0.30 0.30 0.30 0 0 0.25 0.25 0.25 0 0 0.20 0.20 0.20 0 0 0 0 0 1 0" />
+            <feGaussianBlur stdDeviation="2" />
+        </filter>
+    </defs>
+</svg>

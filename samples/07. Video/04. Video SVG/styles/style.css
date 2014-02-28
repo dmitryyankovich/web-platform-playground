@@ -1,0 +1,4 @@
+﻿video {
+    -webkit-filter: url(svg/filters.svg#blur);
+    filter: url(svg/filters.svg#blur);
+}

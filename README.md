@@ -36,7 +36,7 @@ Getting Started
 
 Roadmap
 =======
-Add code somples on following topics:
+Add code samples on following topics:
 
 * FileSystem API
 * Text Track API

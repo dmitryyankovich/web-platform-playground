@@ -11,6 +11,7 @@ Following topics are covered:
 * IndexedDB
 * Audio
 * Video
+* Canvas
 * Real-time Communications
  * Polling / Long-polling / HTTP Streaming
  * Server-sent Events
@@ -42,7 +43,6 @@ Add code samples on following topics:
 * Text Track API
 * Media Source Extensions
 * Encrypted Media Extensions
-* Canvas
 * UserMedia API
 * Audio DSP
 * 3D Graphics

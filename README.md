@@ -54,7 +54,6 @@ Add code samples on following topics:
 * Encrypted Media Extensions
 * Audio DSP
 * 3D Graphics
-* Web Messaging
 * Binary Data
 * Web Workers
 * Web Sockets

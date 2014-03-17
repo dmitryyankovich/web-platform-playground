@@ -12,6 +12,10 @@ Following topics are covered:
 * Audio
 * Video
 * Canvas
+* Media Capture and Streams
+ * HTML Media Capture
+ * Device Tag (Legacy)
+ * User Media API
 * Real-time Communications
  * Polling / Long-polling / HTTP Streaming
  * Server-sent Events
@@ -43,7 +47,6 @@ Add code samples on following topics:
 * Text Track API
 * Media Source Extensions
 * Encrypted Media Extensions
-* UserMedia API
 * Audio DSP
 * 3D Graphics
 * Web Messaging

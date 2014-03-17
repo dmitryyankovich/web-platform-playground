@@ -1,4 +1,4 @@
-﻿var app = require('../../../../shared/server').app;
+﻿var app = require('../../../../../shared/server').app;
 var proxy = require('proxy-middleware');
 var url = require('url');
 

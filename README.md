@@ -4,11 +4,12 @@ Topics
 ======
 Following topics are covered:
 * Examples of live interactive Web applications
-* Web Storage
- * Local Storage
- * Session Storage
-* WebSQL
-* IndexedDB
+* Offline Storage
+ * Web Storage
+  * Local Storage
+  * Session Storage
+ * WebSQL
+ * IndexedDB
 * Audio
 * Video
 * Canvas

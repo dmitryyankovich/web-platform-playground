@@ -17,6 +17,10 @@ Following topics are covered:
  * HTML Media Capture
  * Device Tag (Legacy)
  * User Media API
+* Web Messaging
+ * Direct address space access
+ * Hash-tag hack
+ * Web Messaging API
 * Real-time Communications
  * Polling / Long-polling / HTTP Streaming
  * Server-sent Events

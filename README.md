@@ -6,8 +6,8 @@ Following topics are covered:
 * Examples of live interactive Web applications
 * Offline Storage
  * Web Storage
-   * Local Storage
-   * Session Storage
+    * Local Storage
+    * Session Storage
  * WebSQL
  * IndexedDB
 * Audio
